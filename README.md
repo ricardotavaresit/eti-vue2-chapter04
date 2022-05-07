@@ -1,13 +1,13 @@
 Chapter 04 - Properties and Style in Vue JS
 
-- Class 01: computed properties vs methods in Vue JS
- 
+- Class 01: Computed properties vs methods in Vue JS
+- Class 02: Watchers in Vue JS
 
 ## Technologies used
 
 - VueJS;
 - HTML;
-- JavaScript;
+- JavaScript
 
 ## Contact Us
 
