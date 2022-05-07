@@ -9,7 +9,9 @@
 </head>
 <body>
     <div id="app">
-   
+        <p>{{ count }}</p>
+        <button v-on:click="increment">Increment</button>
+        <button @click="decrement">Decrement</button>
     </div>
 </body>
 </html>
@@ -19,7 +21,15 @@
     new Vue({
         el: "#app", 
         data: {
-          
+            count: 0
+        }, 
+        methods:{
+            increment(){
+                this.count++;
+            }, 
+            decrement(){
+                this.count--;
+            }
         }
 
     });
