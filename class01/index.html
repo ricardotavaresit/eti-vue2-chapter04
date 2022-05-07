@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="app">
-        <p>{{ count }}</p>
+        <p>{{ count }} | {{ countComputed }} </p>
         <button v-on:click="increment">Increment</button>
         <button @click="decrement">Decrement</button>
     </div>
@@ -29,6 +29,11 @@
             }, 
             decrement(){
                 this.count--;
+            }, 
+        }, 
+        computed:{
+            countComputed: function(){
+                return  this.count >= 5 ? "The count is greater or equal to 5." : "The count is smaller to 5."
             }
         }
 
