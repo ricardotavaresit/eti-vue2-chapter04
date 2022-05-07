@@ -9,7 +9,9 @@
 </head>
 <body>
     <div id="app">
- 
+        <button v-on:click="increment">Increment</button>
+        <input type="text" v-model="count">
+        {{ count }}
     </div>
 </body>
 </html>
@@ -18,7 +20,21 @@
     new Vue({
         el: "#app", 
         data: {
-        
+            count: 0
         },  
+        methods:{
+            increment(){
+                this.count++;
+            }
+        },
+        watch:{
+            count: function(value){
+                //const vm = this;
+                setTimeout( () => {
+                    this.count = 0
+                }, 3000);
+                alert(value);
+            }
+        }
     });
 </script>
