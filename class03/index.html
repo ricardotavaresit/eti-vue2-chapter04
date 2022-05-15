@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eti-vue2-chapter04-03-styles-vue-js</title>
+    <title>eti-vue2-chapter03-01-eventos-vue-js</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body>
     <div id="app">
-         
+        <p>{{ count }}</p>
+        <button v-on:click="increment">Increment</button>
+        <button @click="decrement">Decrement</button>
     </div>
 </body>
 </html>
+
 
 <script>
     new Vue({
         el: "#app", 
         data: {
-            
-        } 
+            count: 0
+        }, 
+        methods:{
+            increment(){
+                this.count++;
+            }, 
+            decrement(){
+                this.count--;
+            }
+        }
+
     });
 </script>
