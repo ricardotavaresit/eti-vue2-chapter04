@@ -13,6 +13,9 @@
       .inactive{
         background: #ff0000;
       }
+      .default{
+        color: yellow;
+      }
     </style>
   </head>
   <body>
@@ -20,6 +23,7 @@
       <button v-on:click="isActive = !isActive">Change Class</button>
       <div v-bind:class="{active : isActive}">Example Style Vue</div>
       <div v-bind:class="isActive ? 'active' : 'inactive'">Example Two</div>
+      <div class="default" v-bind:class="isActive = !isActive">Example Three</div>
   </body>
 </html>
 
