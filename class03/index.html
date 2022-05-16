@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eti-vue2-chapter03-01-eventos-vue-js</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eti-vue2-chapter03-03-styles-in-vue-js</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-
-
-</head>
-<body>
+    <style>
+      .active {
+        background: #00ff00;
+      }
+      .inactive{
+        background: #ff0000;
+      }
+    </style>
+  </head>
+  <body>
     <div id="app">
-
-    </div>
-</body>
+      <button v-on:click="isActive = !isActive">Change Class</button>
+      <div v-bind:class="{active : isActive}">Example Style Vue</div>
+      <div v-bind:class="isActive ? 'active' : 'inactive'">Example Two</div>
+  </body>
 </html>
 
-
 <script>
-    new Vue({
-        el: "#app", 
-        data: {
-            
-        }, 
-       
-
-    });
+  new Vue({
+    el: "#app",
+    data: {
+      isActive: true,
+    },
+  });
 </script>
