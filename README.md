@@ -5,7 +5,6 @@ Chapter 04 - Properties and Style in Vue JS
 - Class 03: Styles in Vue JS
 
 ## Technologies used
-
 - VueJS;
 - HTML;
 - JavaScript
