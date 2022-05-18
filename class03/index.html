@@ -29,6 +29,9 @@
       <div v-bind:class="['default', isActive ? 'active' : 'inactive']">
         Example Four
       </div>
+      <div v-bind:class="classObject">
+        Example Five
+      </div>
     </div>
   </body>
 </html>
@@ -38,6 +41,11 @@
     el: "#app",
     data: {
       isActive: true,
+      classObject:{
+        active: false,
+        'text-red': true, 
+        'color-white': false
+      }
     },
   });
 </script>
