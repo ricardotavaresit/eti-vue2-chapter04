@@ -32,6 +32,10 @@
       <div v-bind:class="classObject">
         Example Five
       </div>
+
+      <div v-bind:style="{display:['-webkit-flex','maz-flex','flex']}">
+        Example Six
+      </div>
     </div>
   </body>
 </html>
@@ -42,7 +46,7 @@
     data: {
       isActive: true,
       classObject:{
-        active: false,
+        active: true,
         'text-red': true, 
         'color-white': false
       }
